@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE Tech Starter Kit | Future-Proof Your Skills</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            color: #1e40af;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-box {
+            background: white;
+            color: #334155;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-box h2 {
+            color: #1e40af;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        
+        button, .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        button:hover, .btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .guarantee {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        /* Course Outline */
+        .course-outline {
+            padding: 80px 0;
+            background-color: #f1f5f9;
+        }
+        
+        .modules {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .module {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .module h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .module-number {
+            background: #3b82f6;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: """;
+            font-size: 60px;
+            color: #dbeafe;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+        
+        .testimonial-author {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #3b82f6;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 60px 0;
+            background-color: #f1f5f9;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+
+        /* Phone field specific styling */
+        .phone-field {
+            position: relative;
+        }
+
+        .phone-prefix {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .phone-input {
+            padding-left: 45px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .cta-box {
+                padding: 30px 20px;
+            }
+            
+            .btn, button {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+
+            .phone-prefix {
+                left: 12px;
+                font-size: 14px;
+            }
+
+            .phone-input {
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">FutureProof Tech</div>
+            <h1>Get Hired Faster: Master the 4 Tech Skills Employers Are Begging For</h1>
+            <p class="subtitle">Limited free enrollment ends soon - secure your spot before we close registration for 2025</p>
+        </div>
+    </header>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #1e40af;">What You'll Get In This FREE Course</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto;">Stop feeling overwhelmed by tech trends. We break down complex topics into simple, actionable lessons.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Zero to Confident</h3>
+                    <p>Go from confused to capable with our step-by-step approach. No technical background needed.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💡</div>
+                    <h3>Practical Skills</h3>
+                    <p>Learn what actually matters in today's job market. Skip the theory, focus on application.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🕒</div>
+                    <h3>15-Minute Lessons</h3>
+                    <p>Short, focused videos that fit your busy schedule. Learn during lunch breaks or commute.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Career Advantage</h3>
+                    <p>Stand out in any field with in-demand tech knowledge. Add these skills to your resume.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="margin-bottom: 10px;">Ready To Future-Proof Your Career for 2025?</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; opacity: 0.9;">Join 3,200+ professionals who've taken the first step</p>
+            
+            <div class="cta-box">
+                <h2>Get Instant Access</h2>
+                <p style="margin-bottom: 25px;">Enter your details below and we'll send you the first lesson immediately</p>
+                
+                <!-- Updated Form with Phone Number -->
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Your Phone Number (Optional)</label>
+                        <div class="phone-field">
+                            <span class="phone-prefix">+234</span>
+                            <input type="tel" id="phone" name="phone" class="phone-input" placeholder="903 229 4937">
+                        </div>
+                        <small style="color: #6b7280; font-size: 12px;">We'll text you bonus tips and webinar invites</small>
+                    </div>
+                    
+                    <button type="submit">GET FREE ACCESS NOW →</button>
+                    <p class="guarantee">🔒 No spam, ever. Unsubscribe anytime with one click.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Outline -->
+    <section class="course-outline">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #1e40af;">Here's What You'll Learn</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto;">Four powerful modules delivered straight to your inbox - one per day</p>
+            
+            <div class="modules">
+                <div class="module">
+                    <h3><span class="module-number">1</span> Digital Marketing: The Art of Online Visibility</h3>
+                    <p>Discover how businesses get noticed online. Learn the 3 types of traffic, how to create compelling content, and the basics of social media marketing that actually works.</p>
+                </div>
+                
+                <div class="module">
+                    <h3><span class="module-number">2</span> Cisco Networking: The Internet's Secret Language</h3>
+                    <p>Demystify how the internet actually works. Understand IP addresses, routers, and data packets in simple terms. No technical jargon, just clear explanations.</p>
+                </div>
+                
+                <div class="module">
+                    <h3><span class="module-number">3</span> Cybersecurity: Become "Unhackable"</h3>
+                    <p>Protect yourself and your business from digital threats. Learn the 4 essential security habits that block 99% of attacks. Practical steps you can implement today.</p>
+                </div>
+                
+                <div class="module">
+                    <h3><span class="module-number">4</span> AI & Models: Your New Digital Brain</h3>
+                    <p>Go beyond the hype and learn how AI actually works. Master the art of prompting, understand neural networks, and discover practical AI tools you can use right now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #1e40af;">What Our Students Say</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"I've been wanting to transition into tech but didn't know where to start. This free course gave me the confidence to enroll in a proper certification program. The networking module was a game-changer!"</p>
+                    <div class="testimonial-author">- Sarah J., Marketing Manager</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"As a small business owner, I needed to understand digital marketing without the fluff. This course delivered exactly that - practical, actionable advice I could implement immediately."</p>
+                    <div class="testimonial-author">- Michael T., Entrepreneur</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"The AI module alone was worth it! I went from being intimidated by AI to using it daily in my work. The explanations are so clear and the examples are relevant."</p>
+                    <div class="testimonial-author">- Jessica L., Content Creator</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; color: #1e40af;">Frequently Asked Questions</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Is this course really free?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, 100% free. There are no hidden costs or upsells. We believe everyone should have access to foundational tech education.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How much time do I need?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Each module is designed to take 15-20 minutes. The entire course can be completed in about 1-2 hours total, spread over 4 days.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Do I need any prior experience?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Not at all! We start from absolute basics and build up. The course is designed for complete beginners.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Why do you collect phone numbers?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Phone numbers are optional! If provided, we use them to send bonus tips, webinar reminders, and exclusive content via SMS. You can opt out anytime.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can I access this on mobile?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! The videos and materials are optimized for all devices - phone, tablet, or computer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section" style="padding: 60px 0;">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Start Future-Proofing Your Skills for 2025</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px;">Join thousands of professionals who've already taken the first step toward tech mastery</p>
+            
+            <div class="cta-box">
+                <h2>Get Your FREE Course Now</h2>
+                <p style="margin-bottom: 25px;">First lesson delivered immediately after signup</p>
+                
+                <!-- Second Form with Phone Number -->
+                <form id="signup-form-2">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="phone-field">
+                            <span class="phone-prefix">+234</span>
+                            <input type="tel" name="phone" class="phone-input" placeholder="Your Phone (Optional)">
+                        </div>
+                    </div>
+                    
+                    <button type="submit">GET FREE ACCESS NOW →</button>
+                </form>
+                
+                <!-- WhatsApp Group Invitation -->
+                <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
+                    <p style="margin-bottom: 15px; font-size: 14px;">Want bonus tips and Q&A? Join our free WhatsApp community:</p>
+                    <a href="#" class="whatsapp-btn" onclick="joinWhatsAppGroup()">Join WhatsApp Group</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="color: white; margin-bottom: 20px;">FutureProof Tech</div>
+            <div class="footer-links">
+                <a href="mailto:tagbertso@gmail.com">Contact Support</a>
+                <a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a>
+                <a href="#" onclick="showTerms()">Terms of Service</a>
+                <a href="#" onclick="scheduleCall()">Schedule a Call</a>
+            </div>
+            <div class="copyright">
+                © 2025 FutureProof Tech. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            // In reality, this would send to your backend or Formspree
+            // For now, we'll simulate success and show thank you message
+            showThankYouMessage(name, email, phone);
+        });
+        
+        document.getElementById('signup-form-2').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            
+            showThankYouMessage(name, email, phone);
+        });
+        
+        function showThankYouMessage(name, email, phone) {
+            let message = `Thank you ${name}! Check your email (${email}) for your first lesson.`;
+            
+            if (phone) {
+                message += `\n\nWe've also sent a WhatsApp invitation to +234${phone}.`;
+            } else {
+                message += `\n\nCheck your email for the WhatsApp group invitation.`;
+            }
+            
+            alert(message);
+            
+            // Reset forms
+            document.getElementById('signup-form').reset();
+            document.getElementById('signup-form-2').reset();
+        }
+        
+        // FAQ toggle functionality
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.faq-question span').forEach(item => {
+                item.textContent = '+';
+            });
+            
+            // Toggle clicked FAQ
+            if (!isActive) {
+                answer.classList.add('active');
+                element.querySelector('span').textContent = '-';
+            }
+        }
+        
+        // WhatsApp Group Function
+        function joinWhatsAppGroup() {
+            const phoneNumber = "2349032294937"; // Your WhatsApp number without +
+            const message = "Hi! I'd like to join the Future-Proof Tech WhatsApp group for bonus tips and community support.";
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+        
+        // Contact Functions
+        function showPrivacyPolicy() {
+            alert("Privacy Policy: We respect your privacy. We collect your email to send you the free course and relevant updates. Phone numbers are optional for SMS updates. You can unsubscribe at any time. Data is never sold to third parties.");
+        }
+        
+        function showTerms() {
+            alert("Terms of Service: By signing up, you agree to receive educational content from FutureProof Tech. Phone numbers are used exclusively for course-related SMS updates. You can unsubscribe at any time.");
+        }
+        
+        function scheduleCall() {
+            // This would open your Calendly or scheduling tool
+            window.open('https://calendly.com/your-username', '_blank');
+        }
+
+        // Phone number formatting (optional enhancement)
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        value = value;
+                    } else if (value.length <= 6) {
+                        value = value.substring(0, 3) + ' ' + value.substring(3, 6);
+                    } else {
+                        value = value.substring(0, 3) + ' ' + value.substring(3, 6) + ' ' + value.substring(6, 9);
+                    }
+                }
+                e.target.value = value;
+            });
+        });
+    </script>
+</body>
+</html>
